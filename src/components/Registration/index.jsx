@@ -20,7 +20,7 @@ export const Registration = () => {
 
   const blurHandle = () => {
     const trimmedUsername = user.username.trim();
-    const trimmedEmail = user.email.replace(/\s/g, '');
+    const trimmedEmail = user.email.split(' ').join('');
 
     if (trimmedUsername === '' && trimmedEmail.includes('@')) {
       const emailValid = trimmedEmail.split('@');
